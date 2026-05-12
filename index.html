@@ -105,7 +105,17 @@ section{
   z-index:0;
   overflow:hidden;
 }
-
+section::after{
+  content:'';
+  position:absolute;
+  bottom:-2px;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg, transparent, rgba(125,162,255,0.4), transparent);
+  filter:blur(8px);
+  z-index:10;
+}
 /* MAIN HERO GIF */
 
 .hero-bg{
@@ -140,7 +150,7 @@ section{
   background-position:center;
   background-repeat:no-repeat;
 
-  opacity:.18;
+  opacity:0;
 
   mix-blend-mode:screen;
 
@@ -846,7 +856,7 @@ footer p{
 
       <h2>
         Cancer surgery moves fast.<br>
-        <em>Pathology doesn’t.</em>
+        <em>Pathology doesn't.</em>
       </h2>
 
     </div>
@@ -1106,6 +1116,23 @@ footer p{
   </p>
 
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script>
+  VANTA.WAVES({
+    el: "#problem",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x060A10,
+    shininess: 5.00
+  })
+</script>
 
 </body>
 </html>
